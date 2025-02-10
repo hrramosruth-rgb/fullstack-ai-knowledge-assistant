@@ -5,3 +5,4 @@ Code created in October 2026. This history was split into smaller commits in Oct
 | Simulated date | Actual change |
 | --- | --- |
 | 2025-01-16 | docs: establish disclosed demo and project license (README.md, LICENSE, .gitignore) |
+| 2025-02-10 | build: configure Python package and test dependencies (backend/app/__init__.py, backend/pytest.ini, backend/requirements.txt) |
