@@ -1,0 +1,7 @@
+Demo delivery handbook
+
+Release reviews happen every Thursday. Changes require a passing test suite and one peer review before release.
+
+Customer support hours are Monday to Friday, 09:00 to 17:00 UTC. Urgent incidents are escalated to the on-call engineer.
+
+Project discovery begins with a scope workshop. The team records assumptions and acceptance criteria before implementation.

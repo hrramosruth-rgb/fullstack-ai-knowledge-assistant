@@ -5,3 +5,4 @@ Code created in October 2026. Dates below are illustrative, assigned to meaningf
 | Simulated date | Actual change |
 | --- | --- |
 | 2025-01-16 | chore: scaffold disclosed offline knowledge demo |
+| 2025-05-15 | feat: persist documents and retrieve exact cited passages offline |
