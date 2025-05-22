@@ -9,3 +9,4 @@ Code created in October 2026. This history was split into smaller commits in Oct
 | 2025-03-07 | build: configure frontend dependencies (frontend/package.json) |
 | 2025-04-02 | feat: implement and verify domain (backend/app/domain.py, backend/tests/test_domain.py) |
 | 2025-04-27 | feat: add or refine frontend/index.html (frontend/index.html, frontend/vite.config.js) |
+| 2025-05-22 | data: add handbook demonstration fixture (fixtures/handbook.txt) |
