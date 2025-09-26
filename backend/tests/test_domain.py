@@ -32,3 +32,15 @@ def test_invalid_document_does_not_mutate(kb,title,text):
 @pytest.mark.parametrize('question',['', 'the and is', 'a'*501])
 def test_invalid_question(kb, question):
     with pytest.raises(ValueError): kb.ask(question)
+
+def test_low_overlap_refuses_instead_of_claiming_answer(kb):
+    kb.add('Handbook','Release reviews happen every Thursday.')
+    result = kb.ask('release solar gravitational temperature')
+    assert result['supported'] is False
+    assert result['citations'] == []
+
+def test_library_limit_rejects_without_partial_write(kb):
+    for index in range(100): kb.add(f'Note {index}', 'A short source passage.')
+    with pytest.raises(ValueError): kb.add('Overflow','Extra source.')
+    assert len(kb.documents()) == 100
+    assert kb.add('Note 0','A short source passage.')['title'] == 'Note 0'
