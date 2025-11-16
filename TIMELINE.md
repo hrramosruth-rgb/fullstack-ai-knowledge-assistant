@@ -16,3 +16,4 @@ Code created in October 2026. This history was split into smaller commits in Oct
 | 2025-09-01 | build: configure frontend dependencies (frontend/package.json) |
 | 2025-09-26 | feat: implement and verify domain (backend/app/domain.py, backend/tests/test_domain.py) |
 | 2025-10-22 | ci: verify demo on GitHub Actions (.github/workflows/ci.yml) |
+| 2025-11-16 | test: cover test_evaluation (backend/tests/test_evaluation.py) |
