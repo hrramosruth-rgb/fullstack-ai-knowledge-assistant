@@ -1,0 +1,7 @@
+[
+ {"question":"When are release reviews?","supported":true,"contains":"Thursday"},
+ {"question":"What are support hours?","supported":true,"contains":"09:00 to 17:00 UTC"},
+ {"question":"What happens before release?","supported":true,"contains":"peer review"},
+ {"question":"Who approved the budget?","supported":false,"contains":"No relevant source"},
+ {"question":"What is the lunar temperature?","supported":false,"contains":"No relevant source"}
+]
