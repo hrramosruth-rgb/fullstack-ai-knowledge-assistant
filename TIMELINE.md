@@ -7,3 +7,4 @@ Code created in October 2026. Dates below are illustrative, assigned to meaningf
 | 2025-01-16 | chore: scaffold disclosed offline knowledge demo |
 | 2025-05-15 | feat: persist documents and retrieve exact cited passages offline |
 | 2025-09-18 | feat: add validated ingestion and cited-answer HTTP endpoints |
+| 2026-01-15 | feat: add document library and honest extractive chat interface |
