@@ -19,3 +19,4 @@ Code created in October 2026. This history was split into smaller commits in Oct
 | 2025-11-16 | test: cover test_evaluation (backend/tests/test_evaluation.py) |
 | 2025-12-11 | data: add cases demonstration fixture (eval/cases.json) |
 | 2026-01-06 | docs: document setup and simulation limits (README.md) |
+| 2026-01-31 | build: configure frontend dependencies (frontend/package.json, frontend/package-lock.json) |
