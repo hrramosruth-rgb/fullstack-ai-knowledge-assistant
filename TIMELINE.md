@@ -23,3 +23,4 @@ Code created in October 2026. This history was split into smaller commits in Oct
 | 2026-02-26 | feat: implement and verify domain (backend/app/domain.py, backend/tests/test_domain.py) |
 | 2026-03-23 | ci: verify demo on GitHub Actions (.github/workflows/ci.yml) |
 | 2026-04-17 | build: configure requirements.lock.txt (backend/requirements.lock.txt) |
+| 2026-05-13 | docs: add assistant.png (docs/assistant.png) |
