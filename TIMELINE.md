@@ -9,3 +9,4 @@ Code created in October 2026. Dates below are illustrative, assigned to meaningf
 | 2025-09-18 | feat: add validated ingestion and cited-answer HTTP endpoints |
 | 2026-01-15 | feat: add document library and honest extractive chat interface |
 | 2026-01-15 | feat: add document library and honest extractive chat interface |
+| 2026-05-14 | test: evaluate citations and enforce atomic ingestion limits |

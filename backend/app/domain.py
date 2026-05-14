@@ -32,6 +32,9 @@ class KnowledgeBase:
             raise ValueError('Title must be 1–120 characters and text 1–50,000 characters')
         identity = hashlib.sha256((title + '\0' + text).encode()).hexdigest()[:24]
         with sqlite3.connect(self.path, timeout=10) as db:
+            db.execute('BEGIN IMMEDIATE')
+            if not db.execute('SELECT 1 FROM documents WHERE id = ?', (identity,)).fetchone() and db.execute('SELECT COUNT(*) FROM documents').fetchone()[0] >= 100:
+                raise ValueError('Library limit of 100 documents reached')
             db.execute('INSERT OR IGNORE INTO documents VALUES (?, ?, ?)', (identity, title, text))
         return {'id': identity, 'title': title, 'characters': len(text)}
 
@@ -52,7 +55,7 @@ class KnowledgeBase:
             for index, match in enumerate(re.finditer(r'[^.!?\n]+(?:[.!?]|$)', text)):
                 quote = match.group().strip()
                 overlap = query & terms(quote)
-                if overlap:
+                if len(overlap) / len(query) >= 0.5:
                     hits.append((len(overlap) / len(query), identity, index, {'document_id': identity, 'title': title, 'chunk': index, 'quote': quote}))
         hits.sort(key=lambda item: (-item[0], item[1], item[2]))
         # One best passage keeps every word of the answer directly attributable.
