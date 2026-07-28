@@ -26,3 +26,4 @@ Code created in October 2026. This history was split into smaller commits in Oct
 | 2026-05-13 | docs: add assistant.png (docs/assistant.png) |
 | 2026-06-07 | docs: add verification.md (docs/verification.md) |
 | 2026-07-02 | docs: document setup and simulation limits (README.md) |
+| 2026-07-28 | docs: add verification.md (docs/verification.md) |
