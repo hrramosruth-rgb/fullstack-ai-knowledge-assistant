@@ -28,3 +28,4 @@ Code created in October 2026. This history was split into smaller commits in Oct
 | 2026-07-02 | docs: document setup and simulation limits (README.md) |
 | 2026-07-28 | docs: add verification.md (docs/verification.md) |
 | 2026-08-22 | feat: add or refine frontend/src/main.jsx (frontend/src/main.jsx) |
+| 2026-09-17 | test: add check-pending-inputs verification (scripts/check-pending-inputs.cjs) |
