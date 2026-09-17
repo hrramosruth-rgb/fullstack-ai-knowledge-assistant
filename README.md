@@ -71,6 +71,8 @@ npm run build
 
 Verified locally: **32 Python tests** including five fixture evaluation cases and concurrent ingestion checks; a production build; and headless Chromium checks for the seeded library, a cited answer, refusal, document ingestion, a 390px mobile viewport, and network error handling without page errors. The screenshot comes from the running demo. Fresh verification on October 7, 2026 used Python 3.11 and Node 26. Both suites emitted one upstream Starlette/AnyIO deprecation warning; no tests failed. `backend/requirements.lock.txt` records the exact resolved Python dependency versions; `requirements.txt` lists direct requirements. GitHub Actions runs the full suite and production build; remote CI execution is not asserted here.
 
+The question input is disabled while searching; title and source text are disabled while indexing. This protects a newer draft from being erased by an earlier response. With Playwright available, run `node scripts/check-pending-inputs.cjs` against the running demo to check delayed POSTs. Set `DEMO_URL` if Vite uses a different port, and optionally `PLAYWRIGHT_MODULE` to the installed Playwright module path.
+
 ## Security and practical limits
 
 This local demo has no authentication or tenant isolation. Supplied documents are untrusted data, displayed as escaped React text. No templates, commands, or model instructions are executed. The demo performs no external model calls or URL fetches. Do not enter confidential content into a public deployment. Plain SQLite storage is not encrypted. A production service needs authentication, per-user storage, proxy body limits, rate limits, retention/deletion controls, monitoring, and dependency review.
