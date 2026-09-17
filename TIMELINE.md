@@ -10,3 +10,4 @@ Code created in October 2026. Dates below are illustrative, assigned to meaningf
 | 2026-01-15 | feat: add document library and honest extractive chat interface |
 | 2026-01-15 | feat: add document library and honest extractive chat interface |
 | 2026-05-14 | test: evaluate citations and enforce atomic ingestion limits |
+| 2026-09-17 | fix: retrieve multiline source notes and restore verified builds |

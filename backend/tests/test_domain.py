@@ -44,3 +44,23 @@ def test_library_limit_rejects_without_partial_write(kb):
     with pytest.raises(ValueError): kb.add('Overflow','Extra source.')
     assert len(kb.documents()) == 100
     assert kb.add('Note 0','A short source passage.')['title'] == 'Note 0'
+
+
+def test_multiline_notes_retrieve_unpunctuated_first_line(kb):
+    source = "Release reviews happen every Thursday\nBudget approval happens on Monday"
+    kb.add('Pasted notes', source)
+    result = kb.ask('When are release reviews?')
+    assert result['supported'] is True
+    assert result['answer'] == 'Release reviews happen every Thursday'
+    assert result['citations'][0]['quote'] in source
+
+
+def test_long_multiline_quote_keeps_exact_source_provenance(kb):
+    source = 'Release reviews ' + 'follow documented procedures ' * 99 + 'follow documented procedures' + '\nBudget approval happens on Monday'
+    kb.add('Long notes', source)
+    result = kb.ask('release reviews')
+    assert result['supported'] is True
+    assert result['mode'] == 'offline-extractive'
+    assert result['answer'] == source.split('\n')[0]
+    assert result['citations'][0]['quote'] == result['answer']
+    assert result['citations'][0]['quote'] in source

@@ -52,7 +52,7 @@ class KnowledgeBase:
             rows = db.execute('SELECT id, title, text FROM documents ORDER BY id').fetchall()
         hits = []
         for identity, title, text in rows:
-            for index, match in enumerate(re.finditer(r'[^.!?\n]+(?:[.!?]|$)', text)):
+            for index, match in enumerate(re.finditer(r'[^.!?\n]+(?:[.!?]|(?=\n|$))', text)):
                 quote = match.group().strip()
                 overlap = query & terms(quote)
                 if len(overlap) / len(query) >= 0.5:
